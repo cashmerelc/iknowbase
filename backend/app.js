@@ -25,6 +25,10 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
+const articlesRoutes = require('./routes/articles');
+app.use('/api/articles', articlesRoutes);
+
+
 
 // Admin route
 const adminRoutes = require('./routes/admin');
